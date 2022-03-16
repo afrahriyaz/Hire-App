@@ -1,0 +1,27 @@
+.photo{
+    object-fit: contain;
+}
+
+.try{
+    position: absolute;
+    width: fit-content;
+    right: 300px;
+    top:20%;
+}
+.card{
+    position: absolute;
+    width: 300px;
+    margin:0 auto;
+}
+.welcome{
+    color:darkorange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sty {
+    height: 937px;
+    background-image: url(./image/darwinbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+

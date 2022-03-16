@@ -1,0 +1,17 @@
+<body>
+<div class="card" *ngIf="log.user">
+    <img class="card-img-top img-responsive photo"
+            src="{{ log.user.photoUrl }}">
+    
+    
+    <div class="card-block">
+        <h4 class="card-title">{{ log.user.name }}</h4>
+        <p class="card-text">{{ log.user.email }}</p>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-danger" (click)="log.signOut()">Sign Out</button>
+    </div>
+</div>
+<app-login #log></app-login>
+</body>
+    

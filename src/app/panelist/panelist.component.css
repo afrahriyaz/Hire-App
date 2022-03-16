@@ -1,0 +1,21 @@
+.card{
+    position: absolute;
+    width: 15%;
+    margin:2.5%;
+    background-clip: padding-box;
+    padding: 0.5cm;
+    color: darkblue;
+    text-align: center;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+        to right,
+        rgb(8, 27, 78) 0%,
+        rgb(8, 27, 78) 20%,
+        rgb(247, 108, 15) 20%,
+        rgb(247, 108, 15) 70%,
+        rgb(8,27,78) 70%,
+        rgb(8,27,78) 100%
+    );
+}
