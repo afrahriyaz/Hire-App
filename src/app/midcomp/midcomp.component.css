@@ -1,0 +1,13 @@
+.mid{
+    position:absolute;
+    width: 40%;
+    left: 25%;
+    top:2%;
+}
+.schedule{
+    width:99%;
+    background-color: white;
+    padding: 30px;
+    
+    top:6%;
+}
