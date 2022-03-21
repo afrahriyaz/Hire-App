@@ -12,14 +12,12 @@ import {
 import { GoogleLoginProvider } from 'angularx-social-login';
 import { LoginComponent } from './login/login.component';
 import { PanelistComponent } from './panelist/panelist.component';
-import { MidcompComponent } from './midcomp/midcomp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PanelistComponent,
-    MidcompComponent
+    PanelistComponent
   ],
   imports: [
     BrowserModule,
