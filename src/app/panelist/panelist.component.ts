@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersDataService } from '../services/users-data.service'
 @Component({
   selector: 'app-panelist',
   templateUrl: './panelist.component.html',
@@ -6,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PanelistComponent implements OnInit {
 
-  constructor() { }
+  users:any; 
+
+  constructor(private userData:UsersDataService) {
+    userData.users().subscribe((data) => {
+      console.warn("data", data);
+      this.users = data;
+    });
+  }
 
   ngOnInit(): void {
   }
