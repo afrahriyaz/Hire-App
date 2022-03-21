@@ -1,0 +1,31 @@
+.mid{
+    position:absolute;
+    width: 40%;
+    left: 25%;
+    top:2%;
+}
+.ui{
+    color:rgb(8, 27, 78);
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.display{
+    width:98%;
+    color:darkblue;
+    border: 5px solid rgb(247, 108, 15);
+    background-color: white;
+    padding: 0px;
+    border-radius: 10px;
+    justify-content: space-around;
+    font-weight: bolder;
+    font-size: 150%;
+    text-align: center;
+}
+
+.time, .date
+{
+    display:inline;
+}
+
+
+
