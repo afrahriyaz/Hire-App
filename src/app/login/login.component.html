@@ -1,26 +1,44 @@
-<div *ngIf="!user" class="sty"></div>
+
+<div *ngIf="!user" class="sty">
+    
 <div class="try">
     <div *ngIf="!user" class="welcome">
         <h1>Welcome to Hire</h1>
     </div>
 
-    <div *ngIf="!user" class="btn">
+    <div *ngIf="!user">
         <a routerLink="panelist">
-            <button class="oauth-container btn darken-4 white black-text" style="text-transform:none" (click)="signInWithGoogle()">
+            <!-- <button class="oauth-container btn darken-4 white black-text" style="text-transform:none" (click)="signInWithGoogle()">
                 <div class="left">
                     <img width="20px" style="margin-top:7px; margin-right:8px" alt="Google sign-in" 
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                 </div>
                 Login with Google
-            </button>
+            </button> -->
+            <!-- <button (click)="signInWithGoogle()"> -->
+            <div class="google-btn" (click)="signInWithGoogle()" >
+                <div class="google-icon-wrapper">
+                  <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                </div>
+                <p class="btn-text"><b>Sign in with google</b></p>
+              </div>
+              <!-- </button>  -->
+            
         
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
         
         <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js">
+
+        </script>
         </a>
     </div>
+</div>
 </div>
 <div *ngIf="user">
     <router-outlet></router-outlet>
