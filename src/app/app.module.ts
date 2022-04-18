@@ -12,7 +12,7 @@ import {
 import { GoogleLoginProvider } from 'angularx-social-login';
 import { LoginComponent } from './login/login.component';
 import { PanelistComponent } from './panelist/panelist.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { PanelistComponent } from './panelist/panelist.component';
     AppRoutingModule,
     SocialLoginModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [
     {

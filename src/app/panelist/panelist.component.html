@@ -1,45 +1,115 @@
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
 <body>
-    <h1>Welcome</h1>
-<div class="card" *ngIf="log.user">
-    <img class="card-img-top img-responsive photo"
-            src="{{ log.user.photoUrl }}">
-    
-    
-    <div class="card-block">
-        <h4 class="card-title">{{ log.user.name }}</h4>
-        <p class="card-text">{{ log.user.email }}</p>
+    <div class="navigator">
+        <h1>H</h1>
+        <a  title="User-Panel"><fa-icon class="usericon" [icon]="faUser" (click)="navtopan()"></fa-icon></a>
+        <a  title="View Slots"><fa-icon class="calicon" [icon]="faCal" (click)="navtointerv()"></fa-icon></a>  
     </div>
-    <div class="card-block">
-        <button class="btn btn-danger" (click)="log.signOut()">Sign Out</button>
-    </div>
-</div>
+    <div id="sidebarMenu">
+        <div class="Card" >
+        <h1>HIRE</h1>
+        <img class="card_img" *ngIf="log.user" src="{{ log.user.photoUrl }}" >
+      </div>
+      <div class="card-block">
+        <h4 class="card-email" *ngIf="log.user">{{ log.user.email }}</h4>
+        <h4 class="card-title" *ngIf="log.user">{{ log.user.name }}</h4>
+        <h4 class="card-title">SDE-1</h4> 
+      </div>
+      <hr/>
 <app-login #log></app-login>
-<div class="skill">
+<div class="skills">
     <h2>Skills</h2>
-    <br/>
-    <div class="addskill">Angular</div>
-    <br/>
-    <div class="addskill">Java</div>
-    <br/>
-    <div class="addskill">Spring</div>
+    <br />
+    <div class="skill">
+    <div class="addskill">
+      <p>Angular</p>
+    </div>
+    <br />
+    <div class="addskill">
+      <p>Angular</p>
+    </div>
+    <br />
+    <div class="addskill">
+      <p>Angular</p>
+    </div>
+  </div>
 </div>
-<div class="mid">
-    <h2 class="ui">Upcoming Inteviews</h2>
-    <div class="schedule"></div>
-    <br/>
-    <div class="schedule"></div>
-    <br/>
-    <div class="schedule"></div>
-    <br/>
-    <div class="schedule"></div>
-    <br/><div class="schedule"></div>
-    <br/><div class="schedule"></div>
-    <br/><div class="schedule"></div>
-    <br/>
-</div>
-<div class="rightside">
-    <b><h2 class="hist">History</h2></b>
-</div>
+<button class="btn btn-danger signout" (click)="log.signOut()">Sign Out</button>
+  </div>
+  
+  <div  class="main-content">
+    <div class="part1">
+    <p class="greet" *ngIf="log.user">Good Evening {{log.user.firstName}} ....</p>
+    <div class="incentive">
+      <div class="incentive_card">
+        <p class="p1">Monthly</p>
+        <p class="p2">{{month}}</p>
+      </div>
+      <div class="incentive_card">
+        <p class="p1">Quaterly</p>
+        <p class="p2">{{quarter}}</p>
+      </div>
+      <div class="incentive_card">
+        <p class="p1">Annually</p>
+        <p class="p2">{{year}}</p>
+      </div>
+      
+      
+    </div>
+    <div class="interview-schedule">
+      <h2>Upcoming Inteviews</h2>
+      <div class="scroll-control">
+
+        <!-- <p *ngIf="today.length==0" style="color: white;">No Interviews for today</p>
+        <div class="Mid_Schedule" *ngFor="let day of today">
+          <p style="padding: 0.5rem;font-size: 1.3rem;">Meeting today at {{day.startTime}} - {{day.endTime}}</p>
+        </div>
+         -->
+      </div>
+    </div>
+    </div>
+    
+      <div class="part2">
+        <h1>Incentives</h1>
+        <ul>
+            <li style="--accent-color:#0B374D">
+                <div class="icon"><i class="fa-brands fa-codepen"></i></div>
+         
+                <div class="title"><img  width="100px" src="https://i.ibb.co/0f7Lq2L/incentive.png" alt="image"></div>
+                <div class="descr">{{incentive}}</div>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="user-profile">
+        <img class="user_img" *ngIf="log.user" src="{{ log.user.photoUrl }}" >
+        <p class="user_name" *ngIf="log.user">{{ log.user.name }}</p>
+        <p class="user_email" *ngIf="log.user">{{ log.user.email }}</p>
+        <p class="position"> Round Paneled: {{round}}</p>
+        <hr>
+        <p class="skil">Skills</p>
+        <div class="user_skills">
+          <div class="skill-card">
+            <!-- <p>{{person.primary_Skill}}</p> -->
+            <p>primary</p>
+          </div>
+          <div class="skill-card">
+            <!-- <p>{{person.secondary_Skill}}</p> -->
+            <p>secondary</p>
+          </div>
+          <div class="skill-card">
+            <!-- <p>{{person.tertiary_Skill}}</p> -->
+            <p>tertiary</p>
+          </div>
+        </div>
+        <button class="btn btn-danger mb-2 signout" (click)="log.signOut()">Sign Out</button>
+      </div>
+  </div>
 </body>
 
     
